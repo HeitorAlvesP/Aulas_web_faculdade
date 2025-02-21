@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_1</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botão de música -->
+    <div class="music-button" id="musicControl">
+        🎵
+    </div>
+
+    <audio id="bgMusic" autoplay loop>
+        <source src="./01. Ground Theme.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <div class="container container-custom">
+        <h1><strong>Aula 1</strong></h1>
+
+        <p>Olá! Meu nome é Heitor Alves e sou apaixonado por tecnologia e desenvolvimento web</p>
+
+        <h3>Você pode me encontrar nas redes sociais:</h3>
+        <p>Meu LinkedIn: <a href="https://www.linkedin.com/in/heitor-alves-pinto-a0004928b/" target="_blank">LinkedIn</a></p>
+        <p>Meu GitHub: <a href="https://github.com/HeitorAlvesP" target="_blank">GitHub</a></p>
+
+        <h3>Minhas Habilidades</h3>
+        <p>Desenvolvimento Web <br> HTML, CSS, PHP e JavaScript <br> Versionamento com Git e GitHub</p>
+
+        <h3>Meus Projetos</h3>
+        <div class="projetos">
+            <p>Portfólio Pessoal - Um site onde apresento meus trabalhos e habilidades.</p>
+            <p>Jogo da Memória - Um jogo simples desenvolvido com JavaScript puro.</p>
+            <p>Aplicação de Tarefas - Uma aplicação para gerenciar tarefas diárias.</p>
+        </div>
+
+        <h3>Vídeo mostrando um dos meus projetos em ação:</h3>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const musicControl = document.getElementById("musicControl");
+            
+        let isPlaying = true; // Começa pausado para evitar bloqueios do navegador
+            
+        musicControl.addEventListener("click", () => {
+            if (!isPlaying) {
+                // Certifique-se de que o áudio pode ser reproduzido sem bloqueios
+                music.play().catch(error => {
+                    console.log("Erro ao reproduzir áudio:", error);
+                });
+                musicControl.innerText = "🎵"; // Ícone de pause quando tocando
+            } else {
+                music.pause();
+                musicControl.innerText = "⏸️" ; // Ícone de música quando pausado
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+
+</body>
+</html>
