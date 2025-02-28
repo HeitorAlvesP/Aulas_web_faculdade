@@ -1,0 +1,106 @@
+/*Abaixo estão as regras css utilizadas para fazer a configuração. Seu trabalho é montar o layout
+da página e utilizar essas regras css para estilizar a página. Utilize essas configurações com
+arquivo externo.*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    }
+    
+     header {
+     background: #4CAF50;
+     color: white;
+     padding: 10px 0;
+     text-align: center;
+     }
+     /* Estilização da barra de navegação */
+     nav {
+     background: #333;
+     color: white;
+     padding: 10px;
+     text-align: center;
+     }
+     nav a {
+     color: white;
+     text-decoration: none;
+     padding: 10px 15px;
+     margin: 0 5px;
+     border-radius: 5px;
+     }
+     nav a:hover {
+     background: #575757;
+     }
+     /* Estilização do corpo da página */
+     .container {
+     max-width: 800px;
+     margin: 20px auto;
+     padding: 20px;
+     background: white;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+    
+     h1, h2, h3 {
+     color: #333;
+     }
+     /* Estilização da lista não numerada */ ul {
+     list-style-type: square;
+     padding-left: 20px;
+     }
+     /* Estilização dos links */
+     a {
+     color: #4CAF50;
+     text-decoration: none;
+     }
+     a:hover {
+     text-decoration: underline;
+     }
+     /* Estilização das caixas de texto */
+     input[type="text"], input[type="email"], textarea {
+     width: 100%;
+     padding: 10px;
+     margin: 10px 0;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-sizing: border-box;
+     }
+    
+     /* Estilização do placeholder */
+     .placeholder {
+     width: 100%;
+     height: 300px; /* Altura da imagem */
+     background-color: #ccc; /* Cor cinza do placeholder */
+     border-radius: 10px; /* Cantos arredondados */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #666; /* Cor do texto do placeholder */
+     font-size: 20px; /* Tamanho do texto do placeholder */
+     }
+     /* Estilização do formulário */
+     form {
+     margin-top: 20px;
+     }
+     /* Estilização dos botões */
+     button {
+     background-color: #4CAF50;
+     color: white;
+     padding: 10px 15px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 16px;
+     }
+     button:hover {
+     background-color: #45a049;
+    
+     }
+     /* Estilização da divisão de conteúdo */
+     .content-section {
+     margin: 20px 0;
+     padding: 15px;
+     background: #f9f9f9;
+     border-left: 5px solid #4CAF50;
+     }
